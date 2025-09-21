@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Knowledge Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="watermark-container">
+        </div>
+
+    <div id="quiz-container">
+        <div id="intro-screen">
+            <h1>Welcome to the General Knowledge Quiz!</h1>
+            <p>You have 5 minutes to answer 20 questions.</p>
+            <form id="name-form">
+                <label for="name">Please enter your name:</label>
+                <input type="text" id="name" required>
+                <button type="submit">Start Quiz</button>
+            </form>
+        </div>
+
+        <div id="quiz-screen" style="display: none;">
+            <div id="timer-bar">
+                <div id="timer-fill"></div>
+            </div>
+            <h2 id="question">Question Text Here</h2>
+            <div id="options-container">
+                </div>
+            <div id="navigation-buttons">
+                <button id="prev-btn" style="display: none;">Previous</button>
+                <button id="next-btn">Next</button>
+                <button id="submit-btn" style="display: none;">Submit</button>
+            </div>
+        </div>
+
+        <div id="result-screen" style="display: none;">
+            <h1>Quiz Results</h1>
+            <p>Your score: <span id="score-display"></span></p>
+            <p id="performance-message"></p>
+            <canvas id="pieChart"></canvas>
+            <p>Correct Answers: <span id="correct-answers"></span></p>
+            <p>Incorrect Answers: <span id="incorrect-answers"></span></p>
+            <div id="answers-review">
+                </div>
+            <button id="restart-btn">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
